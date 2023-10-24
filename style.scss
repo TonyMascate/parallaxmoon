@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    color: #fff;
+    scroll-behavior: smooth;
+}
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: fit-content;
+    background: transparent;
+    width: 100%;
+    padding: 20px 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+        padding: 10px 25px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .logo {
+        font-size: 1.9rem;
+    }
+    nav {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            list-style: none;
+            li {
+                padding: 0 5px;
+                a {
+                    font-size: 1.5rem;
+                    border-radius: 40px;
+                    &.active, &:hover{
+                        background: #fff;
+                        color: rgb(25, 0, 66);
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#hero {
+    background: linear-gradient(rgb(59, 0, 126), rgb(25, 0, 66));
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(transparent, rgb(25, 0, 66));
+    }
+    img {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        pointer-events: none;
+    }
+    #moon {
+        mix-blend-mode: screen;
+    }
+    #btn {
+        text-decoration: none;
+        padding: 8px 30px;
+        background: #fff;
+        border-radius: 40px;
+        color: rgb(25, 0, 66);
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: 600;
+        letter-spacing: 2px;
+        transform: translateY(100px);
+    }
+    #text {
+        position: absolute;
+        right: -350px;
+        transform: translateY(-50px);
+        color: #fff;
+        font-size: 7.5vw;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+}
+#content {
+    background: rgb(25, 0, 66);
+    flex-direction: column;
+    padding: 20px;
+    h1{
+        font-weight: 600;
+        font-size: 4.5rem;
+    }
+    p{
+        font-size: 1rem;
+        max-width: 1000px;
+        margin: 10px 0;
+        text-align: justify;
+    }
+}
